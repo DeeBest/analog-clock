@@ -69,3 +69,110 @@ footer .contact-icons {
   transform: scale(0.98);
   transform: rotateZ(90deg);
 }
+
+/* -------------- */
+
+#clock-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  color: #29271b;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  background: url(./images/rolex-logo.jpg);
+  background-size: contain;
+  background-repeat: initial;
+  opacity: 0.7;
+  outline: 1px solid red;
+}
+#hours span {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: red;
+  z-index: 2;
+}
+#six {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#twelve {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#three {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#nine {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#date-display {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: hsl(0, 0%, 70%, 0.8);
+  color: red;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100px;
+  outline: 1px solid red;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+  z-index: 3;
+}
+#clock-hands {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.clock-hand {
+  background-color: #29271b;
+  width: 4px;
+  position: absolute;
+  height: 120px;
+  transform-origin: bottom center;
+  bottom: 50%;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8);
+  outline: 1px solid red;
+}
+#clock-hands::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 20;
+}
+#hours-hand {
+  height: 65px;
+  transform: rotate(30deg);
+  z-index: 10;
+}
+#minutes-hand {
+  height: 90px;
+  transform: rotate(60deg);
+  z-index: 15;
+}
+#seconds-hand {
+  transform: rotate(90deg);
+  background-color: red;
+  z-index: 17;
+  outline: 1px solid white;
+}
